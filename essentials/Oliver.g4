@@ -1,0 +1,25 @@
+grammar Oliver;
+
+prog        : 'Oliver' declara? bloco? 'Moriturus te saluto' ;
+declara     : 'let' ID (',' ID)* 'as' TIPO;
+bloco       : (cmd)+ ;
+cmd         : cmdLeitura | cmdEscrita | cmdExpr | cmdIf | cmdWhile | cmdDoWhile;
+cmdLeitura  : 'read' ID ;
+cmdEscrita  : 'write' ( TEXTO | ID ) ;
+cmdIf       : 'if' '(' expr OP_REL expr ')' '{' cmd+ '}' (cmdElse)? ;
+cmdElse     : 'else' '{' cmd+ '}' ;
+cmdWhile    : 'while' '(' expr OP_REL expr ')' '{' cmd+ '}';
+cmdDoWhile  : 'do' '{' cmd+ '}' 'while' '(' expr OP_REL expr ')' ;
+cmdExpr     : ID '=' expr ; 
+expr        : expr OP_AS termo | termo ;
+termo       : termo OP_AC fator | fator ;
+fator       : NUM | REAL | ID | '(' expr ')' ;
+OP_REL      : '<' | '>' | '<=' | '>=' | '!=' | '==' ;
+OP_AS       : '+' | '-' ;
+OP_AC       : '*' | '/' ;
+TEXTO       : '"' (~[\\"\r\n])+ '"' ;
+NUM         : [0-9]+ ;
+REAL        : [0-9]+ ('.' [0-9]+)?;
+TIPO        : 'real' | 'integer' ;
+ID          : [a-z][a-zA-Z0-9]* ;
+WS          : [ \t\r\n]+ -> skip ;

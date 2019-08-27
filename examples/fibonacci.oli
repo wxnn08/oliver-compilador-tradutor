@@ -1,0 +1,26 @@
+Oliver
+let fi, se, at, fib, cont as integer
+write "Fibonacci:"
+read fib
+fi = 0
+se = 1
+cont = 1
+do {
+	at = fi + se
+	fi = se
+	se = at
+	cont = cont + 1
+} while(cont < fib)
+
+if(fib == 0) {
+	write "0"
+}
+else {
+	if(fib == 1) {
+		write "1"
+	}
+	else {
+		write at 
+	}
+}
+Moriturus te saluto

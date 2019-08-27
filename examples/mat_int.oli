@@ -1,0 +1,10 @@
+Oliver
+let a, b, c, d, e as integer
+read a
+read b
+c = 10
+d = a+b*c
+e = a*(b+c)
+write d
+write e
+Moriturus te saluto

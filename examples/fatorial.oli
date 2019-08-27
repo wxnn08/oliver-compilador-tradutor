@@ -1,0 +1,11 @@
+Oliver
+let fat, obj as integer
+write "Calculo de fatorial:"
+read obj
+fat = 1
+while(obj > 0) {
+	fat = fat * obj
+	obj = obj - 1
+}
+write fat
+Moriturus te saluto
