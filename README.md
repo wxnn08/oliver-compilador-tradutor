@@ -1,6 +1,15 @@
 # oliver-compilador-tradutor
 
-Compilador Oliver. Traduz a linguagem oliveriana para C++, um verdadeiro prodígio.
+*Compilador Oliver. Traduz a linguagem oliveriana para C++, um verdadeiro prodígio.*
+
+Tradutor feito para a disciplina de Compiladores da Universidade Federal do ABC.
+
+Criado por: 
+
+- Bryan Batista Valeriano (BryanValeriano). RA: 21061215 
+- Wesley Pereira da Silva (wxnn08). RA: 11006216
+
+
 
 ## Como rodar
 
@@ -43,9 +52,12 @@ Exemplos:
 
 Os comandos podem ser to tipo:
 
-- Atribuição: `a = b`
-- Condicional: `if ([condição]) { [comandos] }`
-    - Pode ou não ser seguido de um `else { [comando] }`
-- Repetição: `while ([condição] { [comando] }) ` ou `do { [comandos] } while( [condição])`
-- Leitura: `write ([variável]` ou `["texto"])`
-- Escrita: `read ([variável])` 
+> Atribuição: `a = b`
+>
+> Condicional: `if ([condição]) { [comandos] }` . Pode ou não ser acompanhado por um `else ([condição]) { [comandos] }`
+>
+> Repetição: `while ([condição] { [comando] }) ` ou `do { [comandos] } while( [condição])`
+>
+> Leitura: `write ([variável]` ou `["texto"])`
+>
+> Escrita: `read ([variável])` 
